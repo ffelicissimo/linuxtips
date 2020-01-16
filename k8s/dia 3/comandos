@@ -1,0 +1,81 @@
+# kubectl get pods -l dc=UK
+
+# kubectl get pods -l dc=Netherlands
+
+# kubectl get pod -L dc
+
+# kubectl label nodes elliot-02 dc-
+
+# kubectl label nodes --all dc-
+
+# kubectl label node elliot-02 disk=SSD
+
+# kubectl label node elliot-02 dc=UK
+
+# kubectl label node elliot-03 dc=Netherlands
+
+# kubectl label nodes elliot-03 disk=hdd
+
+# kubectl label nodes elliot-03 disk=HDD --overwrite
+
+# kubectl label nodes elliot-02 --list
+
+# kubectl label nodes elliot-03 --list
+
+# kubectl taint nodes --all node-role.kubernetes.io/master-
+
+# kubectl create -f  primeiro-daemonset.yaml
+
+# kubectl get daemonset
+
+# kubectl describe ds daemon-set-primeiro
+
+# kubectl get pods -o wide
+
+# kubectl set image ds daemon-set-primeiro nginx=nginx:1.15.0
+
+# kubectl describe ds daemon-set-primeiro
+
+# kubectl delete pod daemon-set-primeiro-jh2sp
+
+# kubectl rollout history ds daemon-set-primeiro
+
+# kubectl rollout history ds daemon-set-primeiro --revision=1
+
+# kubectl rollout history ds daemon-set-primeiro --revision=2
+
+# kubectl rollout undo ds daemon-set-primeiro --to-revision=1
+
+# kubectl rollout status ds daemon-set-primeiro 
+
+# kubectl describe daemon-set-primeiro-hp4qc | grep -i image:
+
+# kubectl delete -f primeiro-daemonset.yaml
+
+# kubectl create -f primeiro-daemonset.yaml
+
+# kubectl get daemonset
+
+# kubectl describe ds daemon-set-primeiro
+
+# kubectl get ds daemon-set-primeiro -o yaml | grep -A 2 Strategy
+
+# kubectl set image ds daemon-set-primeiro nginx=nginx:1.15.0
+
+# kubectl get daemonset
+
+# kubectl get pods -o wide
+
+# kubectl describe ds daemon-set-primeiro
+
+# kubectl rollout history ds daemon-set-primeiro
+
+# kubectl rollout history ds daemon-set-primeiro --revision=1
+
+# kubectl rollout history ds daemon-set-primeiro --revision=2
+
+# kubectl rollout undo ds daemon-set-primeiro --to-revision=1
+
+# kubectl rollout status ds daemon-set-primeiro
+
+# kubectl delete ds daemon-set-primeiro
