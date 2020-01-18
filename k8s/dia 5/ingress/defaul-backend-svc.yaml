@@ -1,0 +1,11 @@
+Kind: Service
+apiVersion: v1
+metadata:
+  name: default-backend
+spec:
+  ports:
+  - port: 80
+    protocol: TCP
+    targetPort: 8080
+  selector:
+    app: default-backend

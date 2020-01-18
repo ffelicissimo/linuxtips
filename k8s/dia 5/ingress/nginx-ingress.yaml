@@ -1,0 +1,13 @@
+apiVersion: networking.k8s.io/v1beta1
+Kind: Ingress
+metadata:
+  name: nginx-ingress 
+spec:
+  rules:
+  - host: ec2-52-6-47-40.compute-1.amazonaws.com
+    http:
+      paths:
+      - backend:
+          serviceName: nginx-ingress 
+          servicePort: 18080
+        path: /nginx_status
