@@ -6,7 +6,7 @@ ip_vs_wrr \n
 ip_vs_sh \n
 nf_conntrack_ipv4 \n
 ip_vs" > /etc/modules-load.d/k8s.conf
-curl -s https://packages.cloud.google.com/apt/doc/apt-key.gpg | apt-key add -
+sudo curl -s https://packages.cloud.google.com/apt/doc/apt-key.gpg | apt-key add -
 sudo echo "deb http://apt.kubernetes.io/ kubernetes-xenial main" > /etc/apt/sources.list.d/kubernetes.list
 sudo apt-get update -y && sudo apt-get upgrade -y && sudo apt-get install -y apt-transport-https
 sudo curl -fsSL https://get.docker.com | bash
@@ -15,6 +15,6 @@ sudo apt-get update
 sudo apt-get install -y kubelet kubeadm kubectl bash-completion
 sudo kubeadm config images pull
 sudo kubectl apply -f "https://cloud.weave.works/k8s/net?k8s-version=$(kubectl version | base64 | tr -d '\n')"
-source /usr/share/bash-completion/bash_completion
-type _init_completion
+sudo source /usr/share/bash-completion/bash_completion
+sudo type _init_completion
 echo 'source <(kubectl completion bash)' >>~/.bashrc
