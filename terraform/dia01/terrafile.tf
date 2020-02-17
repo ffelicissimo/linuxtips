@@ -6,8 +6,8 @@ module "servers" {
 module "tunnel" {
   source = "./tunnel"
   providers = {
-    aws.east = "aws.east"
-    aws.west = "aws.west"
+    #aws.east = aws.east
+    aws.west = aws.west
   }
 }
 

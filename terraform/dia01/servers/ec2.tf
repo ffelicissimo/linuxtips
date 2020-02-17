@@ -11,7 +11,7 @@ data "aws_ami" "ubuntu" {
 
 resource "aws_instance" "web" {
   #ami = "id da ami"
-  provider = "aws.east"
+  #provider = aws.east
   count = "var.servers"
   ami = "data.aws_ami.ubuntu.id"
   instance_type = "t2.micro"
@@ -24,7 +24,7 @@ resource "aws_instance" "web" {
 
 resource "aws_instance" "west" {
   count = "var.servers"
-  provider = "aws.west"
+  provider = aws.west
   ami = "ami-0e9aa7ba086c3544b"
   #ami = data.aws_ami.ubuntu.id
   instance_type = "t2.micro"
