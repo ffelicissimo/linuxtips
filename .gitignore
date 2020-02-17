@@ -1,1 +1,2 @@
 *.ppk
+./terraform/dia01/.terraform/
