@@ -18,3 +18,4 @@ sudo kubectl apply -f "https://cloud.weave.works/k8s/net?k8s-version=$(kubectl v
 sudo source /usr/share/bash-completion/bash_completion
 sudo type _init_completion
 echo 'source <(kubectl completion bash)' >>~/.bashrc
+sudo curl https://raw.githubusercontent.com/helm/helm/master/scripts/get-helm-3 | bash
